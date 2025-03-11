@@ -76,7 +76,7 @@ export const GmailF = () => {
     <rect x="0.5" y="0.5" width="63" height="63" rx="31.5" stroke="url(#paint1_linear_23_408)"/>
     <rect x="20" y="20" width="24" height="24" rx="5" fill="white"/>
     <path d="M37.9231 26H26.0769C25.4822 26 25 26.4822 25 27.0769V36.2308C25 36.8255 25.4822 37.3077 26.0769 37.3077H37.9231C38.5178 37.3077 39 36.8255 39 36.2308V27.0769C39 26.4822 38.5178 26 37.9231 26Z" stroke="#000001" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-    <path d="M25 27.3462L31.3108 32.7308C31.5043 32.892 31.7482 32.9802 32 32.9802C32.2518 32.9802 32.4957 32.892 32.6892 32.7308L39 27.3462" stroke="#000001" strokeWidth="1.5" strokeLinecap="round" stroke-linejoin="round"/>
+    <path d="M25 27.3462L31.3108 32.7308C31.5043 32.892 31.7482 32.9802 32 32.9802C32.2518 32.9802 32.4957 32.892 32.6892 32.7308L39 27.3462" stroke="#000001" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
     <defs>
     <linearGradient id="paint0_linear_23_408" x1="32" y1="0" x2="32" y2="64" gradientUnits="userSpaceOnUse">
     <stop stopColor="#1A1A1A"/>

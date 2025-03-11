@@ -1,5 +1,4 @@
 @import "tailwindcss";
-
 @plugin "tailwindcss-animate";
 
 @custom-variant dark (&:is(.dark *));
@@ -8,7 +7,9 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
-
+:root {
+  font-family: var(--font-poppins), sans-serif;
+}
 :root {
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);

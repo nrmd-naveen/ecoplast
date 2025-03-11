@@ -19,7 +19,7 @@ const Footer = (
                     />
               </span>
               <span className=" text-white/100 opacity-0 md:opacity-100 text-xs md:text-base tracking-wider font-barlow">
-                Complete digital services for brand success.
+                Designing Dreams, Building Realities
               </span>
             </div>
             <div className="flex flex-col gap-1 text-white/80 text-sm md:text-base tracking-wider font-sora">
