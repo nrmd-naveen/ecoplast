@@ -16,17 +16,23 @@ import {
 
 import { motion } from "framer-motion";
 import Footer from "@/components/sections/Footer";
+import { BlurLine } from "./assets/Icons";
+import { Spotlight } from "@/components/ui/SpotLight";
 
 export default function Home() {
   return (
     <>
-      <div className="bg-white font-poppins">
+      {/* <LandingPage /> */}
+      <div className=" bg-black/5 font-poppins ">
         <NavBar />
-        <div></div>
-        <div className="flex flex-col pt-40 gap-52 md:gap-32 px-10 md:px-50 ">
-          <div className="h-[calc(100vh-200px)] flex justify-center ">
+        <Spotlight fill="#beeb65" className="md:-top-130 -top-160 -left-60 md:-left-110 scale-150 md:scale-100" />
+        
+        <div className=" md:h-screen flex justify-center items-start ">
+
             <Hero2 />
           </div>
+        <div className="flex flex-col pt-40 gap-52 md:gap-32 px-10 lg:px-50 ">
+          <Services />
           <WhyChooseUs />
           <Gallery />
           <FeatureCard />

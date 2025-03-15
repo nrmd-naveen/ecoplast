@@ -4,9 +4,9 @@ import Image from "next/image";
 
 const NavBar = () => {
     return <>
-        <div className="w-full z-50 fixed top-9 flex items-center justify-center">
+        <div className="w-full z-50 sticky top-9 flex items-center justify-center ">
 
-        <div className="w-[80%] h-15 md:h-[68px] md:w-[50%] bg-white/70 backdrop-blur-3xl px-4 py-3 flex items-center justify-between rounded-lg border-[.5px] border-neutral-600/15">
+        <div className="w-[80%] h-15 md:h-[68px] md:w-[50%] bg-black/5 backdrop-blur-3xl px-4 py-3 flex items-center justify-between rounded-lg border-[.5px] border-neutral-600/15">
             <div className="flex max-w-[50%] items-center gap-4">
                     <Image
                         src={logo}
