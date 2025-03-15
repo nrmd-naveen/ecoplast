@@ -6,6 +6,7 @@ import HoverExpand from "@/components/ui/hover-expand";
 import NavBar from "@/components/ui/NavBar";
 import Hero2 from "@/components/sections/hero2";
 import FeatureCard from "@/components/sections/discsec";
+import Services from "@/components/sections/services";
 import {
   MaterialsCaptions,
   MaterialsImages,
@@ -40,19 +41,11 @@ export default function Home() {
       </div>
       <div>
         <Hero2 />
-      </div> */}
-      <div className="bg-white font-poppins">
-        <NavBar />
-        <Hero2 />
-        <div></div>{" "}
-        <div className="flex flex-col pt-40 gap-52 md:gap-32 px-10 md:px-50 ">
-          <WhyChooseUs />
-          <Gallery />
-          <FeatureCard />
-        </div>
-        <Footer />{" "}
-        {/* <ParallaxScroll images={GalleryImages} />
-    //     <HoverExpandCards /> */}{" "}
+      </div>
+
+      */}
+      <div>
+        <Services />
       </div>
     </>
   );

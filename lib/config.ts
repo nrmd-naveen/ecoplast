@@ -35,7 +35,7 @@ export const GalleryImages = [...Array(93).keys()].map(
     }.jpg`
 );
 
-export const Services = [...Array(4).keys()].map((i) => ({
+export const ServicesImage = [...Array(4).keys()].map((i) => ({
   src: `https://ecoplastinteriors.s3.eu-north-1.amazonaws.com/gallery/img_${
     i + 1
   }.jpg`,

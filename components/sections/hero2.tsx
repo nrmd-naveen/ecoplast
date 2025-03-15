@@ -47,6 +47,7 @@ const Hero2 = () => {
           </span>
         </h1>
 
+
         {/* Button */}
         <div className="flex justify-center md:justify-start">
           <WrapButton text="Enquire Now" />
