@@ -49,9 +49,9 @@ export const ParallaxScroll = ({
   }, [controlsFirst, controlsSecond, controlsThird]);
 
   return (
-    <div className={cn("relative h-[40rem] w-full overflow-hidden", className)}>
-      <div className="z-10 absolute top-0 h-20 w-full bg-gradient-to-b from-white"></div> 
-      <div className="z-10 absolute bottom-0 h-20 w-full bg-gradient-to-t from-white"></div> 
+    <div className={cn("relative h-[40rem] w-full overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,white_20%,white_80%,transparent)]", className)}>
+      {/* <div className="z-10 absolute top-0 h-20 w-full bg-gradient-to-b from-white"></div> 
+      <div className="z-10 absolute bottom-0 h-20 w-full bg-gradient-to-t from-white"></div>  */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-start max-w-5xl mx-auto gap-10  md:px-10">
         <div className="grid gap-10">
           {firstPart.map((el, idx) => (

@@ -19,35 +19,45 @@ import Footer from "@/components/sections/Footer";
 
 export default function Home() {
   return (
+    <>
+      <div className="bg-white font-poppins">
+        <NavBar />
+        <div></div>
+        <div className="flex flex-col pt-40 gap-52 md:gap-32 px-10 md:px-50 ">
+          <div className="h-[calc(100vh-200px)] flex justify-center ">
+            <Hero2 />
+          </div>
+          <WhyChooseUs />
+          <Gallery />
+          <FeatureCard />
+        </div>
+
+        <Footer />
+        {/* <ParallaxScroll images={GalleryImages} />
+        <HoverExpandCards /> */}
+      </div>
+    </>
     // <>
+    //   {/* <div className="bg-white font-poppins">
+    //     <NavBar />{" "}
+    //   </div>
+    //   <div>
+    //     <Hero2 />
+    //   </div> */}
     //   <div className="bg-white font-poppins">
     //     <NavBar />
-    //     <Hero />
-    //     <div></div>
+    //     <Hero2 />
+    //     <div></div>{" "}
     //     <div className="flex flex-col pt-40 gap-52 md:gap-32 px-10 md:px-50 ">
     //       <WhyChooseUs />
     //       <Gallery />
     //       <FeatureCard />
     //     </div>
-
-    //     <Footer />
+    //     <Footer />{" "}
     //     {/* <ParallaxScroll images={GalleryImages} />
-    //     <HoverExpandCards /> */}
+    // //     <HoverExpandCards /> */}{" "}
     //   </div>
     // </>
-    <>
-      {/* <div className="bg-white font-poppins">
-        <NavBar />{" "}
-      </div>
-      <div>
-        <Hero2 />
-      </div>
-
-      */}
-      <div>
-        <Services />
-      </div>
-    </>
   );
 }
 
