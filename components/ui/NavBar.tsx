@@ -1,31 +1,54 @@
-import React from "react";
+
+import React, { useEffect } from "react";
 import logo from '../../app/assets/image.png'
 import Image from "next/image";
+import { scrollToSection } from "@/lib/utils";
+import { animate } from "framer-motion";
 
-const NavBar = () => {
+
+const NavBar = ({
+    servicesRef,
+    galleryRef,
+    contactRef,
+    heroRef
+}: {
+    servicesRef: React.RefObject<HTMLInputElement>;
+    galleryRef: React.RefObject<HTMLInputElement>;
+    contactRef: React.RefObject<HTMLInputElement>;
+    heroRef: React.RefObject<HTMLInputElement>;
+    }) => {
+    
+    useEffect(() => {
+        animate([
+          ['.nav', { opacity: 1, y: 20}]
+      ])  
+    },[])
     return <>
-        <div className="w-full z-50 sticky top-9 flex items-center justify-center ">
+        <div
+            style={{
+                opacity: 0,
+                transform: 'translateY(-80px)'
+            }}
+            className="nav w-full z-50 fixed top-[3%] flex items-center justify-center ">
 
-        <div className="w-[80%] h-15 md:h-[68px] md:w-[50%] bg-black/5 backdrop-blur-3xl px-4 py-3 flex items-center justify-between rounded-lg border-[.5px] border-neutral-600/15">
-            <div className="flex max-w-[50%] items-center gap-4">
-                    <Image
-                        src={logo}
-                        alt="logo"
-                        height={40}
-                        className=""
-                    />
-                <h1 className="md:text-xl font-bold"></h1>
-            </div>
-            <div className="min-w-[50%]  flex justify-end md:items-center md:gap-20 pr-5 md:pr-10 md:text-lg font-bold"> 
-                <a href="#" className="hidden md:block text-[#81b121] tracking-wide hover:text-neutral-600">
+        <div className="min-w-80 w-[80%] sm:w-[70%] h-15 md:h-[68px] xl:w-[50%] bg-black/5 backdrop-blur-3xl px-4 py-3 flex md:gap-20 items-center justify-between rounded-lg border-[.5px] border-neutral-600/15">
+            <Image
+                onClick={() => scrollToSection(heroRef)}
+                src={logo}
+                alt="logo"
+                height={40}
+                className=""
+            />
+            <div className="w-full text-nowrap flex justify-center sm:justify-around md:text-lg font-bold "> 
+                <button onClick={ () => scrollToSection(servicesRef)} className=" cursor-pointer hidden sm:block text-[#81b121] tracking-wide hover:text-neutral-600">
                     Services
-                </a>
-                <a href="#" className="hidden md:block text-[#81b121] tracking-wide hover:text-neutral-600">
+                </button>
+                <button onClick={ () => scrollToSection(galleryRef)} className=" cursor-pointer hidden md:block text-[#81b121] tracking-wide hover:text-neutral-600">
                     Gallery
-                </a>
-                <a href="#" className="text-[#81b121] tracking-wide hover:text-neutral-600">
+                </button>
+                <button onClick={ () => scrollToSection(contactRef)} className=" cursor-pointer text-[#81b121] tracking-wide hover:text-neutral-600">
                     Contact Us
-                </a>
+                </button>
             </div>
     
         </div>  

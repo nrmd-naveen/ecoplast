@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, animate } from "framer-motion";
 import WrapButton from "@/components/ui/ButtonCTA";
 import Image from "next/image"; // Only for Next.js; remove if using React
 
@@ -11,10 +11,18 @@ const imageMap: Record<string, string> = {
   "Living Hall": "/living.png",
 };
 
-const Hero2 = () => {
+const Hero2 = ({ heroRef }: {heroRef: React.RefObject<HTMLInputElement>}) => {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
+
+    //animations
+    animate([
+      ['.headline', { opacity: 1, y: 0 }, { at: 0.4}],
+      ['.btn', { opacity: 1, x: 0 }, { at: 0.8}],
+      ['.img', { opacity: 1, y: -20 }, { at: 0.8}],
+    ])
+
     // Change word every 5 seconds
     const textInterval = setInterval(() => {
       setIndex((prev) => (prev + 1) % words.length);
@@ -24,12 +32,16 @@ const Hero2 = () => {
   }, []);
 
   return (
-    <div className="w-[80vw] mt-23 md:mt-35 flex flex-col gap-15 md:flex-row  items-center justify-between ">
+    <section id="hero" ref={heroRef} className=" mt-30 md:h-[60%] w-[80vw] flex flex-col gap-15 md:flex-row  items-center justify-between ">
       {/* Left Side */}
       
       <div className=" flex flex-col justify-center md:items-start items-center space-y-6 text-center md:text-left w-full md:w-1/2 h-full">
         {/* Main Heading */}
-        <h1 className="w-full leading-10 md:leading-16 text-nowrap py-2 text-center text-[33px] md:text-[40px] font-bold tracking-tight lg:text-5xl xl:text-6xl">
+        <h1
+          style={{
+          opacity: 0,
+        }}
+          className="headline w-full leading-10 md:leading-16 text-nowrap py-[10%] md:py-2 text-center text-[33px] md:text-[40px] font-bold tracking-tight lg:text-5xl xl:text-6xl">
             <span className="bg-gradient-to-b from-primary/90 to-primary/60 bg-clip-text py-1 text-transparent">
               Craft your perfect{' '}
           </span>
@@ -71,18 +83,28 @@ const Hero2 = () => {
           </span>
         </h1> */}
 
-        <div className=" md:hidden bg-gray-700 rounded-3xl h-70 sm:h-80 md:h-120 max-w-[400px] w-full md:w-1/2 flex justify-center ">
+        <div
+          style={{
+          opacity: 0,
+          transform: 'translateY(20px)'
+        }}
+          className="img md:hidden rounded-3xl h-70 sm:h-80 md:h-120 max-w-[400px] w-full md:w-1/2 flex justify-center ">
           
         <Image
           src={imageMap[words[index]]}
           alt={words[index]}
           width= "500"
           height="500"
-          className="w-full h-70 sm:h-80 md:h-120 object-cover rounded-3xl"
+          className="w-full shadow-lg shadow-[#484848]/50  h-70 sm:h-80 md:h-120 object-cover rounded-3xl"
         />
       </div>
         {/* Button */}
-        <div className="w-full mt-8 flex flex-col items-center justify-center ">
+        <div
+          style={{
+            opacity: 0,
+          transform: 'translateX(-20px)'
+        }}
+          className="btn w-full mt-8 flex flex-col items-center justify-center ">
           <WrapButton >
             Enquire Now
           </WrapButton>
@@ -91,16 +113,23 @@ const Hero2 = () => {
       </div>
 
       {/* Right Side - Dynamic Image */}
-      <div className=" hidden bg-gray-300 rounded-3xl h-70 sm:h-80 md:h-120 w-full md:w-1/2 md:flex justify-center">
-        <Image
-          src={imageMap[words[index]]}
-          alt={words[index]}
-          width= "500"
-          height="500"
-          className="w-full h-70 sm:h-80 md:h-120 object-cover rounded-3xl"
-        />
-      </div>
-    </div>
+      <div
+        style={{
+          opacity: 0,
+          transform: 'translateY(20px)'
+        }}
+        className="img hidden rounded-3xl w-full md:w-1/2 md:flex justify-center">
+  <div className="w-[500px] h-[400px] shadow-lg shadow-[#484848]/70 relative rounded-3xl overflow-hidden">
+    <Image
+      src={imageMap[words[index]]}
+      alt={words[index]}
+      layout="fill"
+      objectFit="cover"
+    />
+  </div>
+</div>
+
+    </section>
   );
 };
 

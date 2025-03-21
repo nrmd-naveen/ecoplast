@@ -1,3 +1,5 @@
+import { title } from "process";
+import bathroomPic from "../../app/assets/services/bathroom.webp";
 export const HeroImages = [
   "https://s3-alpha-sig.figma.com/img/64e5/9971/a135495d2ea068875724acc5125a8eff?Expires=1742169600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Zkoh6YFMjQZAWwlnxBSDGqecz~nbW4sTSlN8Kz104wa0w5nJuZEgJDLTl4RrB7C2vma2rKh1cGCFapil3YXIa~Vl0CISH~efIHXBfm3KBxch5~xi67yGKBITfC3aqU9Ge-6B69Pa0GrEYZnz5kaHOirPw67EbVSYZjrewrcHctoqEnUx-m7vYYsHtRep9gN~eWm~uk5bVVNFuiTzFDWHpbCyMXvIJJgjBE1qpTU~78qDjsDNL5a-~F4GHO7SLz1YFH7s-SVcK~lWoiOWtmZdDa-~ASUdRKHmO5aYXQHpcqf-5-PEC4liYZdU5PSByRxpOlW9NZX7xItgKMliA1jXhg__",
   // "https://homerenot.com/wp-content/uploads/2023/05/shutterstock_498571717.jpg",
@@ -5,6 +7,7 @@ export const HeroImages = [
   "https://www.zmartbuild.com/wp-content/uploads/2021/09/shutterstock_95233129-scaled.jpg",
   "https://realplast.in/fmcg_upload/blog/17072302511144k.png",
 ];
+
 export const MaterialsImages = [
   // "https://homerenot.com/wp-content/uploads/2023/05/shutterstock_498571717.jpg",
   "https://www.zmartbuild.com/wp-content/uploads/2021/09/shutterstock_1512689903-scaled.jpg",
@@ -35,12 +38,95 @@ export const GalleryImages = [...Array(93).keys()].map(
     }.jpg`
 );
 
-export const ServicesImage = [...Array(4).keys()].map((i) => ({
-  src: `https://ecoplastinteriors.s3.eu-north-1.amazonaws.com/gallery/img_${
-    i + 1
-  }.jpg`,
-  alt: `image${i}`,
-}));
+export const ServicesImage = [
+  {
+    image: "https://s3-alpha-sig.figma.com/img/64e5/9971/a135495d2ea068875724acc5125a8eff?Expires=1742169600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Zkoh6YFMjQZAWwlnxBSDGqecz~nbW4sTSlN8Kz104wa0w5nJuZEgJDLTl4RrB7C2vma2rKh1cGCFapil3YXIa~Vl0CISH~efIHXBfm3KBxch5~xi67yGKBITfC3aqU9Ge-6B69Pa0GrEYZnz5kaHOirPw67EbVSYZjrewrcHctoqEnUx-m7vYYsHtRep9gN~eWm~uk5bVVNFuiTzFDWHpbCyMXvIJJgjBE1qpTU~78qDjsDNL5a-~F4GHO7SLz1YFH7s-SVcK~lWoiOWtmZdDa-~ASUdRKHmO5aYXQHpcqf-5-PEC4liYZdU5PSByRxpOlW9NZX7xItgKMliA1jXhg__",
+    title: "Living Hall",
+  }, 
+  // "https://homerenot.com/wp-content/uploads/2023/05/shutterstock_498571717.jpg",
+  // {
+  //   image: "https://megastarproducts.co.za/cdn/shop/collections/Camfly_JSW_Fluted_Slat_Wall_Cladding.jpg",
+  //   title: "Office Interiors",
+  // },
+  // {
+  //   image: "https://www.zmartbuild.com/wp-content/uploads/2021/09/shutterstock_95233129-scaled.jpg",
+  //   title: "Wardrobes",
+  // },
+  {
+    image: "https://realplast.in/fmcg_upload/blog/17072302511144k.png",
+    title: "Modern Kitchen",
+  },
+  {
+    image: "https://ecoplastinteriors.s3.eu-north-1.amazonaws.com/ServicesImages/bathroom.webp",
+    title: "Bathrooms",
+  },
+  {
+    image: "https://ecoplastinteriors.s3.eu-north-1.amazonaws.com/ServicesImages/wardrobes.webp",
+    title: "Wardrobes",
+  },
+  {
+    image: "https://ecoplastinteriors.s3.eu-north-1.amazonaws.com/ServicesImages/office.webp",
+    title: "Office Interiors",
+  },
+  {
+    image: "https://ecoplastinteriors.s3.eu-north-1.amazonaws.com/ServicesImages/kidsroom.webp",
+    title: "Kids Rooms",
+  },
+  
+]
+
+const GoogleReviewLink = "https://www.google.com/maps/place/Ecoplast+interiors/@12.7910539,77.6246849,17z/data=!4m8!3m7!1s0x3bae6bfb02b2b54b:0x375054b623a33778!8m2!3d12.7910539!4d77.6246849!9m1!1b1!16s%2Fg%2F11lmnr06z1?entry=ttu&g_ep=EgoyMDI1MDMxNi4wIKXMDSoASAFQAw%3D%3D";
+
+export const Reviews = [
+    {
+        "id": 1,
+        "name": "Arun Prasad",
+        "image": "https://randomuser.me/api/portraits/men/32.jpg",
+        "review": "We recently got our modular kitchen done, and I must say the quality and finish are excellent. The team was professional and delivered on time. Highly recommend their services!",
+        "posted": "3 days ago",
+        "link": GoogleReviewLink
+    },
+    {
+        "id": 2,
+        "name": "Deepa Nair",
+        "image": "https://randomuser.me/api/portraits/women/45.jpg",
+        "review": "Absolutely love our new bedroom interiors! The design is modern yet cozy, and they made sure every small detail was perfect. Great work by the team.",
+        "posted": "1 week ago",
+        "link": GoogleReviewLink
+    },
+    {
+        "id": 3,
+        "name": "Santosh Kumar",
+        "image": "https://randomuser.me/api/portraits/men/56.jpg",
+        "review": "We got office interiors done for our startup, and it has completely transformed the space. The ergonomic design and lighting have improved productivity. Very happy with the outcome!",
+        "posted": "5 days ago",
+        "link": GoogleReviewLink
+    },
+    {
+        "id": 4,
+        "name": "Meghana Reddy",
+        "image": "https://randomuser.me/api/portraits/women/33.jpg",
+        "review": "I wanted a fun and creative space for my kids, and they delivered exactly that! The vibrant colors and smart storage solutions are perfect. My kids love their new room!",
+        "posted": "2 weeks ago",
+        "link": GoogleReviewLink
+    },
+    {
+        "id": 5,
+        "name": "Venkatesh Iyer",
+        "image": "https://randomuser.me/api/portraits/men/48.jpg",
+        "review": "The wall panels and loft coverings added a premium touch to our home. The finish is flawless, and the installation was quick and hassle-free.",
+        "posted": "4 days ago",
+        "link": GoogleReviewLink
+    },
+    // {
+    //     "id": 6,
+    //     "name": "Sowmya Rajan",
+    //     "image": "https://randomuser.me/api/portraits/women/29.jpg",
+    //     "review": "Our bathroom revamp was done beautifully. The digital designs and high-quality materials have made our bathroom look luxurious. Great attention to detail!",
+    //     "posted": "1 week ago",
+    //     "link": GoogleReviewLink
+    // }
+]
 
 // export const GalleryImages = [
 //   "https://images.unsplash.com/photo-1554080353-a576cf803bda?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3387&q=80",

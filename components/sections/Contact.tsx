@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-const ContactForm = () => {
+const ContactForm = ({ contactRef }: { contactRef: React.RefObject<HTMLInputElement> }) => {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -38,8 +38,10 @@ const ContactForm = () => {
   };
 
   return (
-    <section className="max-w-2xl mx-auto p-6">
-      <h2 className="text-3xl font-bold text-center mb-6">Enquire Now</h2>
+    <section id="contact" ref={contactRef} className="max-w-3xl mx-auto p-6">
+        <div className="text-center text-3xl font-bold pb-15">
+          Enquire Now
+        </div>
       <div className="space-y-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <input
@@ -83,13 +85,15 @@ const ContactForm = () => {
           onChange={handleChange}
           className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none resize-none"
         ></textarea>
-        <button
-          type="button"
-          onClick={sendToWhatsApp}
-          className="w-full bg-[#6a9319] text-white py-3 rounded-lg text-lg font-semibold hover:bg-[#6a93199b] transition duration-300"
-        >
-          Contact Us
-        </button>
+        <div className="flex justify-center">
+          <button
+            type="button"
+            onClick={sendToWhatsApp}
+            className="w-full max-w-md bg-[#96c832] text-white py-3 rounded-lg text-lg font-semibold hover:bg-[#dde8c69b] transition duration-300"
+            >
+            Contact Us
+          </button>
+        </div>
       </div>
     </section>
   );

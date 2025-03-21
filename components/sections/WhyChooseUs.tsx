@@ -2,9 +2,9 @@ import { MaterialsCaptions, MaterialsImages } from "@/lib/config";
 import React from "react";
 import HoverExpand from "../ui/hover-expand";
 
-const WhyChooseUs = () => {
+const WhyChooseUs = ( { whyChooseUsRef }: { whyChooseUsRef: React.RefObject<HTMLInputElement> }) => {
     return (
-        <div className="h-60 md:h-80  w-full  flex flex-col md:flex-row  items-center justify-center md:justify-between gap-4">
+        <section id="whyChooseUs" ref={whyChooseUsRef} className="h-60 md:h-80  w-full  flex flex-col md:flex-row  items-center justify-center md:justify-between gap-4">
             <div className="h-full text-center md:text-left flex flex-col justify-around max-w-md">
                 <h1 className="text-4xl font-bold">Why Choose Us?</h1>
                 <div className="pt-8 pb-2">
@@ -27,7 +27,7 @@ const WhyChooseUs = () => {
                       maxThumbnails={11}
                     />
             </div>
-      </div>
+      </section>
   )
 };
 

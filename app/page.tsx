@@ -1,3 +1,5 @@
+"use client"
+
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
 import Gallery from "@/components/sections/Gallery";
 import { ParallaxScroll } from "@/components/ui/GalleryParallax";
@@ -19,27 +21,45 @@ import { motion } from "framer-motion";
 import Footer from "@/components/sections/Footer";
 import { BlurLine } from "./assets/Icons";
 import { Spotlight } from "@/components/ui/SpotLight";
+import Testimonials from "@/components/sections/Testimonials";
+import { useRef } from "react";
+import { features } from "process";
 
 export default function Home() {
+
+  const contactRef: React.RefObject<HTMLInputElement> = useRef(null);
+  const heroRef: React.RefObject<HTMLInputElement> = useRef(null);
+  const whyChooseUsRef: React.RefObject<HTMLInputElement> = useRef(null);
+  const servicesRef: React.RefObject<HTMLInputElement> = useRef(null);
+  const galleryRef: React.RefObject<HTMLInputElement> = useRef(null);
+  const featuresRef: React.RefObject<HTMLInputElement> = useRef(null);
+  const testimonialsRef: React.RefObject<HTMLInputElement> = useRef(null);
+
   return (
     <>
       {/* <LandingPage /> */}
       <div className=" bg-black/5 font-poppins ">
-        <NavBar />
+        <NavBar
+          servicesRef={servicesRef}
+          galleryRef={galleryRef}
+          contactRef={contactRef}
+          heroRef={heroRef}
+        />
         <Spotlight
           fill="#beeb65"
           className="md:-top-130 -top-160 -left-60 md:-left-110 scale-150 md:scale-100"
         />
 
-        <div className=" md:h-screen flex justify-center items-start ">
-          <Hero2 />
+        <div className=" h-screen flex justify-center items-center">
+          <Hero2 heroRef={heroRef} />
         </div>
-        <div className="flex flex-col pt-40 gap-52 md:gap-32 px-10 lg:px-50 ">
-          <Services />
-          <WhyChooseUs />
-          <Gallery />
-          <FeatureCard />
-          <ContactForm />
+        <div className="flex flex-col gap-52 md:gap-32 px-10 lg:px-50 ">
+          <Services servicesRef={servicesRef} />
+          <WhyChooseUs whyChooseUsRef={whyChooseUsRef} />
+          <Gallery galleryRef={galleryRef} />
+          <FeatureCard featuresRef={featuresRef} />
+          <Testimonials testimonialsRef={testimonialsRef} />
+          <ContactForm contactRef={contactRef} />
         </div>
 
         <Footer />

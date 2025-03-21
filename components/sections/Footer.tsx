@@ -3,11 +3,10 @@ import Image from "next/image";
 import { GmailF, InstagramF, LinkedInF } from "../../app/assets/Icons";
 import logo from "../../app/assets/image.png";
 
-const Footer = (
-  ) => {
+const Footer = () => {
     return (
         <>
-        <div className="flex flex-col gap-8 justify-center items-center py-6 bg-gradient-to-b to-[#484848]  rounded-t-xl px-4 md:px-20 mt-40 text-nowrap">
+        <section id="footer" className="flex flex-col gap-8 justify-center items-center py-6 bg-gradient-to-b to-[#484848]  rounded-t-xl px-4 md:px-20 mt-40 text-nowrap">
           <div className="flex justify-around md:justify-between items-center w-full  md:px-20">
             <div className=" flex flex-col md:gap-5">
               <span  className=" md:scale-100 cursor-pointer md:pl-1 pt-4" >
@@ -40,7 +39,7 @@ const Footer = (
               <a href={`http://mailto:ecoplastinterior2024@outlook.com`}><GmailF /></a>
             </div>
           </div>
-        </div>  
+        </section>  
         </>
   )
 };

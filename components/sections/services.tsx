@@ -8,12 +8,14 @@ const services = [
   { image: "/images/loft-coverings.jpg", title: "Loft Coverings" },
 ];
 
-const Services = () => {
+const Services = ({ servicesRef }: {servicesRef: React.RefObject<HTMLInputElement>}) => {
   return (
-    <section className="text-center py-10">
-      <h2 className="text-3xl font-bold mb-6"> Our Services</h2>
-      <div className="flex justify-center gap-10 flex-wrap">
-        {services.map((service, index) => (
+    <section id="services" ref={servicesRef} className="text-center pt-15 space-y-15">
+        <h1 className="text-center text-3xl font-bold">
+          Services we provide
+        </h1>
+      <div className="flex justify-center gap-20 flex-wrap">
+        {ServicesImage.map((service, index) => (
           <CircleCard key={index} image={service.image} title={service.title} />
         ))}
       </div>
