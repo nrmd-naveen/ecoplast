@@ -1,5 +1,8 @@
 import { title } from "process";
 import bathroomPic from "../../app/assets/services/bathroom.webp";
+import { ArrowRight, Home, ChefHat, Droplets, Shirt, Briefcase, Baby, IndianRupee } from "lucide-react"
+import { CloudRain, Shield, Wifi, DollarSign, Award, CheckCircle } from 'lucide-react';
+
 export const HeroImages = [
   "https://s3-alpha-sig.figma.com/img/64e5/9971/a135495d2ea068875724acc5125a8eff?Expires=1742169600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Zkoh6YFMjQZAWwlnxBSDGqecz~nbW4sTSlN8Kz104wa0w5nJuZEgJDLTl4RrB7C2vma2rKh1cGCFapil3YXIa~Vl0CISH~efIHXBfm3KBxch5~xi67yGKBITfC3aqU9Ge-6B69Pa0GrEYZnz5kaHOirPw67EbVSYZjrewrcHctoqEnUx-m7vYYsHtRep9gN~eWm~uk5bVVNFuiTzFDWHpbCyMXvIJJgjBE1qpTU~78qDjsDNL5a-~F4GHO7SLz1YFH7s-SVcK~lWoiOWtmZdDa-~ASUdRKHmO5aYXQHpcqf-5-PEC4liYZdU5PSByRxpOlW9NZX7xItgKMliA1jXhg__",
   // "https://homerenot.com/wp-content/uploads/2023/05/shutterstock_498571717.jpg",
@@ -38,6 +41,44 @@ export const GalleryImages = [...Array(93).keys()].map(
     }.jpg`
 );
 
+export const servicesData = [
+  {
+    image:"https://ecoplastinteriors.s3.eu-north-1.amazonaws.com/ServicesImages/Modern+Home+Interior.jpeg",
+    title: "Living Hall",
+    icon: Home,
+    description: "Create a stunning living space that reflects your personal style and comfort.",
+  },
+  {
+    image: "https://ecoplastinteriors.s3.eu-north-1.amazonaws.com/ServicesImages/Modern+Office+Interior.jpeg",
+    title: "Office Interiors",
+    icon: Briefcase,
+    description: "Professional workspace designs that boost productivity and impress clients.",
+  },
+  {
+    image: "https://realplast.in/fmcg_upload/blog/17072302511144k.png",
+    title: "Modern Kitchen",
+    icon: ChefHat,
+    description: "Functional and elegant kitchen designs that combine beauty with practicality.",
+  },
+  {
+    image: "https://ecoplastinteriors.s3.eu-north-1.amazonaws.com/ServicesImages/bathroom.webp",
+    title: "Bathrooms",
+    icon: Droplets,
+    description: "Luxurious bathroom solutions that transform your daily routine into a spa-like experience.",
+  },
+  {
+    image: "https://ecoplastinteriors.s3.eu-north-1.amazonaws.com/ServicesImages/wardrobes.webp",
+    title: "Wardrobes",
+    icon: Shirt,
+    description: "Custom storage solutions that maximize space while maintaining aesthetic appeal.",
+  },
+  {
+    image: "https://ecoplastinteriors.s3.eu-north-1.amazonaws.com/ServicesImages/kidsroom.webp",
+    title: "Kids Rooms",
+    icon: Baby,
+    description: "Playful and practical spaces that grow with your child and spark imagination.",
+  },
+]
 export const ServicesImage = [
   {
     image: "https://s3-alpha-sig.figma.com/img/64e5/9971/a135495d2ea068875724acc5125a8eff?Expires=1742169600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Zkoh6YFMjQZAWwlnxBSDGqecz~nbW4sTSlN8Kz104wa0w5nJuZEgJDLTl4RrB7C2vma2rKh1cGCFapil3YXIa~Vl0CISH~efIHXBfm3KBxch5~xi67yGKBITfC3aqU9Ge-6B69Pa0GrEYZnz5kaHOirPw67EbVSYZjrewrcHctoqEnUx-m7vYYsHtRep9gN~eWm~uk5bVVNFuiTzFDWHpbCyMXvIJJgjBE1qpTU~78qDjsDNL5a-~F4GHO7SLz1YFH7s-SVcK~lWoiOWtmZdDa-~ASUdRKHmO5aYXQHpcqf-5-PEC4liYZdU5PSByRxpOlW9NZX7xItgKMliA1jXhg__",
@@ -156,35 +197,42 @@ export const Reviews = [
 //   "https://images.unsplash.com/photo-1505144808419-1957a94ca61e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3070&q=80",
 // ];
 
+
 export const features = [
   {
     title: "Waterproof",
     description:
       "Perfect for any weather condition, ensuring durability and reliability.",
+    Icon: CloudRain, // Use the CloudRain icon for waterproofing
   },
   {
     title: "Rustproof",
     description:
       "Resistant to rust, making it ideal for long-term use without corrosion concerns.",
+    Icon: Shield, // Use the Shield icon for rustproofing
   },
   {
     title: "Remote Access",
     description:
       "Easily accessible and controllable from anywhere via remote technology.",
+    Icon: Wifi, // Use the Wifi icon for remote access
   },
   {
     title: "Cost-Effective",
     description:
       "High-quality at an affordable price, making it accessible to all budgets.",
+    Icon: IndianRupee, // Use the DollarSign icon for cost-effectiveness
   },
   {
     title: "20-Year Warranty",
     description:
       "Backed by a 20-year warranty, ensuring peace of mind and confidence in longevity.",
+    Icon: Award, // Use the Award icon for the warranty
   },
   {
     title: "5-Year Guarantee",
     description:
       "Comes with a 5-year guarantee, providing assurance of product reliability and support.",
+    Icon: CheckCircle, // Use the CheckCircle icon for the guarantee
   },
 ];

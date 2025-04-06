@@ -29,9 +29,9 @@ const NavBar = ({
                 opacity: 0,
                 transform: 'translateY(-80px)'
             }}
-            className="nav w-full z-50 fixed top-[3%] flex items-center justify-center ">
+            className="nav w-full z-50 fixed top-[1%] md:top-[3%] flex items-center justify-center ">
 
-        <div className="min-w-80 w-[80%] sm:w-[70%] h-15 md:h-[68px] xl:w-[50%] bg-black/5 backdrop-blur-3xl px-4 py-3 flex md:gap-20 items-center justify-between rounded-lg border-[.5px] border-neutral-600/15">
+        <div className="min-w-80 w-[85%] sm:w-[70%] h-15 md:h-[68px] xl:w-[50%] bg-black/5 backdrop-blur-3xl px-4 py-3 flex md:gap-20 items-center justify-between rounded-lg border-[.5px] border-neutral-600/15">
             <Image
                 onClick={() => scrollToSection(heroRef)}
                 src={logo}

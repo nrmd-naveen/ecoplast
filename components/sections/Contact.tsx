@@ -1,6 +1,8 @@
 "use client";
 
+import { SendIcon } from "lucide-react";
 import { useState } from "react";
+import Title from "../ui/Title";
 
 const ContactForm = ({ contactRef }: { contactRef: React.RefObject<HTMLInputElement> }) => {
   const [formData, setFormData] = useState({
@@ -38,11 +40,12 @@ const ContactForm = ({ contactRef }: { contactRef: React.RefObject<HTMLInputElem
   };
 
   return (
-    <section id="contact" ref={contactRef} className="max-w-3xl mx-auto p-6">
-        <div className="text-center text-3xl font-bold pb-15">
+    <section id="contact" ref={contactRef} className="max-w-3xl mx-auto py-6 px-2">
+        <Title>
           Enquire Now
-        </div>
-      <div className="space-y-4">
+      </Title>
+      
+      <div className="space-y-4 mt-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <input
             type="text"
@@ -50,7 +53,7 @@ const ContactForm = ({ contactRef }: { contactRef: React.RefObject<HTMLInputElem
             placeholder="Name"
             value={formData.name}
             onChange={handleChange}
-            className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
+            className="bg-white/80 w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
           />
           <input
             type="text"
@@ -58,7 +61,7 @@ const ContactForm = ({ contactRef }: { contactRef: React.RefObject<HTMLInputElem
             placeholder="Phone"
             value={formData.phone}
             onChange={handleChange}
-            className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
+            className="bg-white/80 w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
           />
           <input
             type="email"
@@ -66,7 +69,7 @@ const ContactForm = ({ contactRef }: { contactRef: React.RefObject<HTMLInputElem
             placeholder="E-mail"
             value={formData.email}
             onChange={handleChange}
-            className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
+            className="bg-white/80 w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
           />
         </div>
         <input
@@ -75,7 +78,7 @@ const ContactForm = ({ contactRef }: { contactRef: React.RefObject<HTMLInputElem
           placeholder="Subject"
           value={formData.subject}
           onChange={handleChange}
-          className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
+          className="bg-white/80 w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
         />
         <textarea
           name="message"
@@ -83,15 +86,15 @@ const ContactForm = ({ contactRef }: { contactRef: React.RefObject<HTMLInputElem
           rows={4}
           value={formData.message}
           onChange={handleChange}
-          className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none resize-none"
+          className="bg-white/80 w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none resize-none"
         ></textarea>
         <div className="flex justify-center">
           <button
             type="button"
             onClick={sendToWhatsApp}
-            className="w-full max-w-md bg-[#96c832] text-white py-3 rounded-lg text-lg font-semibold hover:bg-[#dde8c69b] transition duration-300"
+            className="mt-5 cursor-pointer group w-full flex justify-center items-center gap-4 max-w-md bg-[#96c832] text-white py-3 rounded-lg text-lg font-semibold hover:bg-[#96c832] transition duration-300"
             >
-            Contact Us
+            Contact Us <SendIcon className="rotate-z-15 w-5 h-5 group-hover:rotate-z-45 transition-transform duration-500 ease-in-out" />
           </button>
         </div>
       </div>

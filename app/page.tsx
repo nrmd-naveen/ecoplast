@@ -24,6 +24,7 @@ import { Spotlight } from "@/components/ui/SpotLight";
 import Testimonials from "@/components/sections/Testimonials";
 import { useRef } from "react";
 import { features } from "process";
+import ServicesNew from "@/components/sections/ServicesNew";
 
 export default function Home() {
 
@@ -53,11 +54,12 @@ export default function Home() {
         <div className=" h-screen flex justify-center items-center">
           <Hero2 heroRef={heroRef} />
         </div>
-        <div className="flex flex-col gap-52 md:gap-32 px-10 lg:px-50 ">
-          <Services servicesRef={servicesRef} />
+        <div className="flex flex-col gap-52 md:gap-32 px-10 md:px-[10%] xl:px-[15%] ">
+          {/* <Services servicesRef={servicesRef} /> */}
+          <ServicesNew />
           <WhyChooseUs whyChooseUsRef={whyChooseUsRef} />
-          <Gallery galleryRef={galleryRef} />
           <FeatureCard featuresRef={featuresRef} />
+          <Gallery galleryRef={galleryRef} />
           <Testimonials testimonialsRef={testimonialsRef} />
           <ContactForm contactRef={contactRef} />
         </div>

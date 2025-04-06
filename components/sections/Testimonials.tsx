@@ -1,15 +1,17 @@
 import { GoogleLogo, StarSVG } from "@/app/assets/Icons";
 import { Reviews } from "@/lib/config";
 import React from "react";
-
+import Title from "../ui/Title";
+import { motion } from "framer-motion";
 
 const Testimonials = ({ testimonialsRef }: { testimonialsRef: React.RefObject<HTMLInputElement> }) => {
     return (
         <section id="testimonials" ref={testimonialsRef} className="w-full space-y-15">
-            <h1 className="text-3xl text-center font-bold ">
+            <Title>
                     What our customers say ?
-                </h1>
-            <div className="flex justify-center flex-wrap gap-10 w-full">
+            </Title>
+                
+            <div className="flex justify-center flex-wrap gap-10 w-full mt-10">
                 { Reviews.map( review => <TestiCard data = {review} />)}  
             </div>
         </section>
@@ -28,7 +30,12 @@ const TestiCard = ({ data }: {
 } )  => {
 
     return (
-        <div className="bg-white/50 hover:bg-white/10 border-1 border-black/15 rounded-2xl shadow-xl min-w-80 w-100 md:w-120 p-4 space-y-4">
+        <motion.div
+            initial={{ opacity: 0, scale: 0.9, y: 30 }}
+            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="bg-white/50 hover:bg-white/10 border-1 border-black/15 rounded-2xl shadow-xl min-w-80 w-100 md:w-120 p-4 space-y-4"
+        >
             <div className=" ">
                 <FiveStars />
             </div>
@@ -46,7 +53,7 @@ const TestiCard = ({ data }: {
                 </div>
             </div>
 
-        </div>
+        </motion.div>
     );
 }
 

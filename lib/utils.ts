@@ -13,4 +13,6 @@ export  const scrollToSection = (sectionRef: React.RefObject<HTMLInputElement> )
       top: sectionRef.current.offsetTop - 120,
       behavior: 'smooth',
     });
-  };
+};
+  
+

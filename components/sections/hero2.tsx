@@ -32,7 +32,7 @@ const Hero2 = ({ heroRef }: {heroRef: React.RefObject<HTMLInputElement>}) => {
   }, []);
 
   return (
-    <section id="hero" ref={heroRef} className=" mt-30 md:h-[60%] w-[80vw] flex flex-col gap-15 md:flex-row  items-center justify-between ">
+    <section id="hero" ref={heroRef} className=" md:mt-30 md:h-[60%] w-[80vw] flex flex-col gap-15 md:flex-row  items-center justify-between ">
       {/* Left Side */}
       
       <div className=" flex flex-col justify-center md:items-start items-center space-y-6 text-center md:text-left w-full md:w-1/2 h-full">
