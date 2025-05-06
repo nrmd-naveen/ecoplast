@@ -3,6 +3,9 @@ import { Reviews } from "@/lib/config";
 import React from "react";
 import Title from "../ui/Title";
 import { motion } from "framer-motion";
+import profile1 from "../../app/assets/profile1.jpg";
+import profile2 from "../../app/assets/profile2.png";
+import Image from "next/image";
 
 const Testimonials = ({ testimonialsRef }: { testimonialsRef: React.RefObject<HTMLInputElement> }) => {
     return (
@@ -42,7 +45,7 @@ const TestiCard = ({ data }: {
             <p className="mt-2 text-sm text-gray-700">{data.review}</p>
             <div className="w-full flex justify-between">
                 <div className="flex items-center">
-                    <img src={data.image} alt="testimonial" className="w-8 h-8 rounded-full mr-2 md:mr-3" />
+                    <Image src={profile2} alt="testimonial" className="w-8 h-8 rounded-full mr-2 md:mr-3" />
                     <p className="text-sm md:text-md font-semibold text-gray-900">{data.name}</p>
                 </div>
                 <div className=" flex gap-2 md:gap-3 items-center">

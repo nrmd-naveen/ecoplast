@@ -2,6 +2,8 @@ import { title } from "process";
 import bathroomPic from "../../app/assets/services/bathroom.webp";
 import { ArrowRight, Home, ChefHat, Droplets, Shirt, Briefcase, Baby, IndianRupee } from "lucide-react"
 import { CloudRain, Shield, Wifi, DollarSign, Award, CheckCircle } from 'lucide-react';
+import profile1 from "../app/assets/profile1.jpg";
+import profile2 from "../app/assets/profile2.png";
 
 export const HeroImages = [
   "https://s3-alpha-sig.figma.com/img/64e5/9971/a135495d2ea068875724acc5125a8eff?Expires=1742169600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Zkoh6YFMjQZAWwlnxBSDGqecz~nbW4sTSlN8Kz104wa0w5nJuZEgJDLTl4RrB7C2vma2rKh1cGCFapil3YXIa~Vl0CISH~efIHXBfm3KBxch5~xi67yGKBITfC3aqU9Ge-6B69Pa0GrEYZnz5kaHOirPw67EbVSYZjrewrcHctoqEnUx-m7vYYsHtRep9gN~eWm~uk5bVVNFuiTzFDWHpbCyMXvIJJgjBE1qpTU~78qDjsDNL5a-~F4GHO7SLz1YFH7s-SVcK~lWoiOWtmZdDa-~ASUdRKHmO5aYXQHpcqf-5-PEC4liYZdU5PSByRxpOlW9NZX7xItgKMliA1jXhg__",
@@ -122,7 +124,7 @@ export const Reviews = [
     {
         "id": 1,
         "name": "Arun Prasad",
-        "image": "https://randomuser.me/api/portraits/men/32.jpg",
+        "image": profile1,
         "review": "We recently got our modular kitchen done, and I must say the quality and finish are excellent. The team was professional and delivered on time. Highly recommend their services!",
         "posted": "3 days ago",
         "link": GoogleReviewLink
@@ -130,7 +132,7 @@ export const Reviews = [
     {
         "id": 2,
         "name": "Deepa Nair",
-        "image": "https://randomuser.me/api/portraits/women/45.jpg",
+        "image": profile2,
         "review": "Absolutely love our new bedroom interiors! The design is modern yet cozy, and they made sure every small detail was perfect. Great work by the team.",
         "posted": "1 week ago",
         "link": GoogleReviewLink

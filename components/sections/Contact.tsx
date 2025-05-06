@@ -22,7 +22,7 @@ const ContactForm = ({ contactRef }: { contactRef: React.RefObject<HTMLInputElem
 
 
   const sendToWhatsApp = () => {
-    const phoneNumber = "919843965683";
+    // const phoneNumber = "919843965683";
     const { name, phone, email, subject, message } = formData;
 
 
@@ -35,7 +35,7 @@ const ContactForm = ({ contactRef }: { contactRef: React.RefObject<HTMLInputElem
     const encodedMessage = encodeURIComponent(text);
 
 
-    const whatsappUrl = `https://api.whatsapp.com/send?phone=${919843965684}&text=${encodedMessage}`;
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=${918015057532}&text=${encodedMessage}`;
     window.open(whatsappUrl, "_blank");
   };
 
