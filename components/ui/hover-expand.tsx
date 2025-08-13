@@ -1,7 +1,8 @@
 "use client"
 
 import React, { useEffect, useState, useRef } from "react"
-import { AnimatePresence, motion } from "framer-motion"
+import { motion } from "framer-motion"
+import Image from "next/image"
 
 interface HoverExpandProps {
   images: string[]
@@ -16,8 +17,6 @@ export default function HoverExpand({
   images,
   captions = [],
   initialSelectedIndex = 0,
-  thumbnailHeight = 200,
-  modalImageSize = 400,
   maxThumbnails = 11,
 }: HoverExpandProps) {
   const [selectedIndex, setSelectedIndex] = useState<number>(initialSelectedIndex)
@@ -42,7 +41,7 @@ export default function HoverExpand({
     return () => {
       if (timerRef.current) clearInterval(timerRef.current)
     }
-  }, [images.length])
+  }, [images.length, startInterval])
 
   const handleMouseEnter = (index: number) => {
     setSelectedIndex(index)
@@ -83,11 +82,16 @@ export default function HoverExpand({
               layoutId={`image-${i}`}
               className="absolute inset-0 size-full"
             >
-              <img
+              <Image
                 src={imageUrl}
                 alt={`Image ${i + 1}`}
                 className="size-full object-cover transition-transform duration-300"
               />
+              {/* <img
+                src={imageUrl}
+                alt={`Image ${i + 1}`}
+                className="size-full object-cover transition-transform duration-300"
+              /> */}
             </motion.div>
 
             {/* Animated Text at the top */}

@@ -12,10 +12,10 @@ const NavBar = ({
     contactRef,
     heroRef
 }: {
-    servicesRef: React.RefObject<HTMLInputElement>;
-    galleryRef: React.RefObject<HTMLInputElement>;
-    contactRef: React.RefObject<HTMLInputElement>;
-    heroRef: React.RefObject<HTMLInputElement>;
+    servicesRef: React.RefObject<HTMLInputElement | null>;
+    galleryRef: React.RefObject<HTMLInputElement | null>;
+    contactRef: React.RefObject<HTMLInputElement | null>;
+    heroRef: React.RefObject<HTMLInputElement | null>;
     }) => {
     
     useEffect(() => {

@@ -1,6 +1,7 @@
 // "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 // type FeatureProps = {
 //   title: string;
 //   description: string;
@@ -15,14 +16,15 @@ import { motion } from "framer-motion";
 //   );
 // };
 
-const CircleCard = ({ image, title }) => {
+const CircleCard = ({ image, title }: { image: string; title: string }) => {
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0, y: 10 }}
       whileInView={{ opacity: 1, scale: 1, y: 0,  }}
       className="flex flex-col items-center">
       <div className="w-60 h-60 rounded-full overflow-hidden shadow-2xl border-2 border-gray-300">
-        <img src={image} alt={title} className="w-full h-full object-cover" />
+        <Image src={image} alt={title} className="w-full h-full object-cover" />
+        {/* <img src={image} alt={title} className="w-full h-full object-cover" /> */}
       </div>
       <p className="mt-2 text-center font-semibold">{title}</p>
     </motion.div>

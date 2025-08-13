@@ -7,9 +7,9 @@ export function cn(...inputs: ClassValue[]) {
 
 
 
-export  const scrollToSection = (sectionRef: React.RefObject<HTMLInputElement> ): void => {
+export  const scrollToSection = (sectionRef: React.RefObject<HTMLInputElement | null> ): void => {
+    if (!sectionRef.current) return
     window.scrollTo({
-        //@ts-ignore
       top: sectionRef.current.offsetTop - 120,
       behavior: 'smooth',
     });

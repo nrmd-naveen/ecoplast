@@ -1,5 +1,5 @@
 "use client";
-import { motion, useAnimation } from "framer-motion";
+import { AnimationControls, motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
@@ -24,7 +24,8 @@ export const ParallaxScroll = ({
 
   useEffect(() => {
     // console.log(firstPart, secondPart, thirdPart)
-    const animateScroll = async (controls: any, direction: number) => {
+    // @typescript-eslint/no-explicit-any
+    const animateScroll = async (controls: AnimationControls, direction: number) => {
       while (true) {
         await controls.start({
           y: [0, direction],
@@ -33,7 +34,8 @@ export const ParallaxScroll = ({
         controls.set({ y: 0 }); // Reset position for infinite loop
       }
     };
-    const animateScrollMid = async (controls: any, direction: number) => {
+    //@typescript-eslint/no-explicit-any
+    const animateScrollMid = async (controls: AnimationControls, direction: number) => {
       while (true) {
         await controls.start({
           y: [direction, 0],

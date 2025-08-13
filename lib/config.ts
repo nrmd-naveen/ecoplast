@@ -1,7 +1,5 @@
-import { title } from "process";
-import bathroomPic from "../../app/assets/services/bathroom.webp";
-import { ArrowRight, Home, ChefHat, Droplets, Shirt, Briefcase, Baby, IndianRupee } from "lucide-react"
-import { CloudRain, Shield, Wifi, DollarSign, Award, CheckCircle } from 'lucide-react';
+import { Home, ChefHat, Droplets, Shirt, Briefcase, Baby, IndianRupee } from "lucide-react"
+import { CloudRain, Shield, Wifi, Award, CheckCircle } from 'lucide-react';
 import profile1 from "../app/assets/profile1.jpg";
 import profile2 from "../app/assets/profile2.png";
 

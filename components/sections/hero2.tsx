@@ -11,7 +11,7 @@ const imageMap: Record<string, string> = {
   "Living Hall": "/living.png",
 };
 
-const Hero2 = ({ heroRef }: {heroRef: React.RefObject<HTMLInputElement>}) => {
+const Hero2 = ({ heroRef }: {heroRef: React.RefObject<HTMLInputElement | null>}) => {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -108,7 +108,7 @@ const Hero2 = ({ heroRef }: {heroRef: React.RefObject<HTMLInputElement>}) => {
           <WrapButton >
             Enquire Now
           </WrapButton>
-          <p className="text-neutral-500 font-semibold mt-4 md:mt-2 md:text-lg">Let's design your future !</p>
+          <p className="text-neutral-500 font-semibold mt-4 md:mt-2 md:text-lg">Let&apos;s design your future !</p>
         </div>
       </div>
 

@@ -1,6 +1,5 @@
 
 import Image from "next/image";
-import { GmailF, InstagramF, LinkedInF } from "../../app/assets/Icons";
 import logo from "../../app/assets/image.png";
 import phone from "../../app/assets/icon/phone.png";
 import whatsapp from "../../app/assets/icon/whatsapp.png";
@@ -126,7 +125,10 @@ const FooterCard = () => {
         
         <div className="flex justify-center items-end">
           <span className=" font-medium text-[11px] md:text-base tracking-wider font-sora hover:text-neutral-600/70 ">
-            Website By <span className="md:pl-2 font-bold text-sm md:text-lg text-neutral-800/55 hover:text-neutral-800/80 cursor-pointer">webzy studios</span>
+            Website By <a target="_blank" href="https://webzystudios.com" rel="noopener noreferrer">
+
+              <span className="md:pl-2 font-bold text-sm md:text-lg text-neutral-800/55 hover:text-neutral-800/80 cursor-pointer">webzy studios</span>
+              </a>
           </span>
         </div>
 

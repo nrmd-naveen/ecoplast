@@ -3,7 +3,7 @@ import React from "react";
 import HoverExpand from "../ui/hover-expand";
 import Title from "../ui/Title";
 
-const WhyChooseUs = ( { whyChooseUsRef }: { whyChooseUsRef: React.RefObject<HTMLInputElement> }) => {
+const WhyChooseUs = ( { whyChooseUsRef }: { whyChooseUsRef: React.RefObject<HTMLInputElement | null> }) => {
     return (
         <section id="whyChooseUs" ref={whyChooseUsRef} className="h-60 md:h-80  w-full  flex flex-col md:flex-row  items-center justify-center md:justify-between gap-4">
             <div className=" text-center md:text-left flex flex-col justify-around max-w-md">

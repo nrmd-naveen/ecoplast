@@ -15,7 +15,7 @@ export const HeroSlider = ({
   direction = "up",
 }: {
   images: string[];
-  children: any;
+  children: React.ReactNode;
   overlay?: React.ReactNode;
   overlayClassName?: string;
   className?: string;
@@ -23,7 +23,7 @@ export const HeroSlider = ({
   direction?: "up" | "down";
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [loading, setLoading] = useState(false);
+  // const [loading, setLoading] = useState(false);
   const [loadedImages, setLoadedImages] = useState<string[]>([]);
 
   const handleNext = () => {
@@ -37,13 +37,9 @@ export const HeroSlider = ({
       prevIndex - 1 < 0 ? images.length - 1 : prevIndex - 1
     );
   };
-
+  
   useEffect(() => {
-    loadImages();
-  }, []);
-
   const loadImages = () => {
-    setLoading(true);
     const loadPromises = images.map((image) => {
       return new Promise((resolve, reject) => {
         const img = new Image();
@@ -56,10 +52,14 @@ export const HeroSlider = ({
     Promise.all(loadPromises)
       .then((loadedImages) => {
         setLoadedImages(loadedImages as string[]);
-        setLoading(false);
+        // setLoading(false);
       })
       .catch((error) => console.error("Failed to load images", error));
   };
+
+  loadImages();
+}, [images]);  // Dependency array: re-run if `images` changes
+
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "ArrowRight") {
@@ -71,8 +71,8 @@ export const HeroSlider = ({
 
     window.addEventListener("keydown", handleKeyDown);
 
-    // autoplay
-    let interval: any;
+    // Autoplay
+    let interval: string | number | NodeJS.Timeout | undefined;
     if (autoplay) {
       interval = setInterval(() => {
         handleNext();
@@ -83,7 +83,7 @@ export const HeroSlider = ({
       window.removeEventListener("keydown", handleKeyDown);
       clearInterval(interval);
     };
-  }, []);
+  }, [autoplay, handleNext, handlePrevious]);
 
   const slideVariants = {
     initial: {
@@ -180,7 +180,7 @@ export function Hero() {
         <WrapButton>
           <span>Enquire now →</span>
         </WrapButton>
-        <p className="text-neutral-300 mt-4 md:mt-2 md:text-lg">Let's design your future !</p>
+        <p className="text-neutral-300 mt-4 md:mt-2 md:text-lg">Let&apos;s design your future !</p>
       </motion.div>
     </HeroSlider>
   );

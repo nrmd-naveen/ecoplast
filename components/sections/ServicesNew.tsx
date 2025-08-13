@@ -2,8 +2,8 @@ import { servicesData } from "@/lib/config"
 import { ArrowRight } from "lucide-react"
 import { Card } from "../ui/card"
 import { ProgressiveBlur } from "../ui/progressive-blur"
-import { Badge } from "../ui/badge"
 import { useEffect, useState } from "react"
+import Image from "next/image"
 
 
 
@@ -103,7 +103,7 @@ function ModernCard({
       id={`card-${index}`}
     >
       <div className="absolute inset-0 overflow-hidden rounded-xl">
-        <img
+        <Image
           src={image || '/placeholder.svg'}
           alt={title}
           className={`h-full w-full object-cover transition-transform duration-700 group-hover:scale-110 ${isMobile && isInView ? 'scale-110' : ''}`}

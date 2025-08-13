@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 type FeatureProps = {
   title: string;
   description: string;
+  Icon: React.FC<React.SVGProps<SVGSVGElement>>;
 };
 
 export const FeatureCard: React.FC<FeatureProps> = ({ title, description, Icon }) => {

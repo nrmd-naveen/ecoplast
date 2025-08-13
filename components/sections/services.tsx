@@ -1,12 +1,12 @@
 import CircleCard from "@/components/ui/sercir";
 import { ServicesImage } from "@/lib/config";
 
-const services = [
-  { image: { ServicesImage }, title: "Modular Kitchen" },
-  { image: "/images/office-interiors.jpg", title: "Office Interiors" },
-  { image: "/images/wardrobes.jpg", title: "Wardrobes" },
-  { image: "/images/loft-coverings.jpg", title: "Loft Coverings" },
-];
+// const services = [
+//   { image: { ServicesImage }, title: "Modular Kitchen" },
+//   { image: "/images/office-interiors.jpg", title: "Office Interiors" },
+//   { image: "/images/wardrobes.jpg", title: "Wardrobes" },
+//   { image: "/images/loft-coverings.jpg", title: "Loft Coverings" },
+// ];
 
 const Services = ({ servicesRef }: {servicesRef: React.RefObject<HTMLInputElement>}) => {
   return (

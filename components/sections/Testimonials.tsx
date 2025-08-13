@@ -3,11 +3,19 @@ import { Reviews } from "@/lib/config";
 import React from "react";
 import Title from "../ui/Title";
 import { motion } from "framer-motion";
-import profile1 from "../../app/assets/profile1.jpg";
 import profile2 from "../../app/assets/profile2.png";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
-const Testimonials = ({ testimonialsRef }: { testimonialsRef: React.RefObject<HTMLInputElement> }) => {
+type TestimonialData = {
+  id: number;
+  name: string;
+  image: StaticImageData | string;  
+  review: string;
+  posted: string;
+  link: string;
+};
+
+const Testimonials = ({ testimonialsRef }: { testimonialsRef: React.RefObject<HTMLInputElement | null> }) => {
     return (
         <section id="testimonials" ref={testimonialsRef} className="w-full space-y-15">
             <Title>
@@ -15,21 +23,15 @@ const Testimonials = ({ testimonialsRef }: { testimonialsRef: React.RefObject<HT
             </Title>
                 
             <div className="flex justify-center flex-wrap gap-10 w-full mt-10">
-                { Reviews.map( review => <TestiCard data = {review} />)}  
+
+                { Reviews.map( (review, ind) => <TestiCard key={`testi${ind}`} data = {review} />)}  
             </div>
         </section>
   )
 };
 
 const TestiCard = ({ data }: {
-    data: {
-        id: number;
-        name: string;
-        image: string;
-        review: string;
-        posted: string;
-        link: string;
-    }
+    data: TestimonialData
 } )  => {
 
     return (

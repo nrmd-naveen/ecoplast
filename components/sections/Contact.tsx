@@ -4,7 +4,7 @@ import { SendIcon } from "lucide-react";
 import { useState } from "react";
 import Title from "../ui/Title";
 
-const ContactForm = ({ contactRef }: { contactRef: React.RefObject<HTMLInputElement> }) => {
+const ContactForm = ({ contactRef }: { contactRef: React.RefObject<HTMLInputElement | null> }) => {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",

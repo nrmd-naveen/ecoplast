@@ -2,7 +2,7 @@ import { FeatureCard } from "@/components/ui/discover";
 import { features } from "@/lib/config";
 import Title from "../ui/Title";
 
-const FeatureGrid = ({featuresRef}: {featuresRef: React.RefObject<HTMLInputElement>}) => {
+const FeatureGrid = ({featuresRef}: {featuresRef: React.RefObject<HTMLInputElement | null>}) => {
   return (
     <>
       <section id="section" ref={featuresRef} className="">
